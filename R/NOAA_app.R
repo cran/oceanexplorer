@@ -42,7 +42,7 @@ NOAA_app <- function(cache = FALSE) {
             "R package: ",
             a(
               href = "https://github.com/UtrechtUniversity/oceanexplorer",
-              "install_github('UtrechtUniversity/oceanexplorer')"
+              "install.packages('oceanexplorer')"
             )
           )
         ),
@@ -90,8 +90,7 @@ NOAA_app <- function(cache = FALSE) {
         paste0(
           "This project was funded by ERC Starting grant number 802835, ",
           "OceaNice, awarded to Peter Bijl.    ",
-          tags$img(src = "img/oceanice-logo.jpg", width = "150px"),
-          tags$img(src = "img/erc-logo.jpg", width = "69px")
+          tags$img(src = "img/oceanice-logo.png", width = "150px")
         )
       ),
       style ="text-align: right;"

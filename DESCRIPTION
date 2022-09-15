@@ -1,6 +1,6 @@
 Package: oceanexplorer
 Title: Explore Our Planet's Oceans with NOAA
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     c(
       person(
@@ -48,10 +48,10 @@ BugReports: https://github.com/UtrechtUniversity/oceanexplorer/issues
 Language: en-US
 LazyData: true
 NeedsCompilation: no
-Packaged: 2022-09-06 07:53:33 UTC; maria
+Packaged: 2022-09-14 10:57:27 UTC; nicola
 Author: Martin Schobben [aut, cre, cph]
     (<https://orcid.org/0000-0001-8560-0037>),
   Peter Bijl [ctb] (<https://orcid.org/0000-0002-1710-4012>)
 Maintainer: Martin Schobben <schobbenmartin@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-09-07 07:40:05 UTC
+Date/Publication: 2022-09-15 09:10:08 UTC

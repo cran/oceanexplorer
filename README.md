@@ -1,10 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<a href="https://erc.europa.eu/"><img src="man/figures/erc-logo.jpg" align="right" height="56" /></a>
-<a href="https://www.uu.nl/en/news/erc-grant-for-peter-bijl-to-predict-future-sea-level"><img src="man/figures/oceanice-logo.jpg" align="right" height="56" /></a>
-
-# The oceanexplorer
+# The oceanexplorer <a href="https://www.uu.nl/en/news/erc-grant-for-peter-bijl-to-predict-future-sea-level"><img src="man/figures/oceanice-logo.png" style="float:right; height:50px;"/></a>
 
 <!-- badges: start -->
 
@@ -18,8 +15,8 @@ coverage](https://codecov.io/gh/UtrechtUniversity/Oceanexplorer/branch/master/gr
 <!-- badges: end -->
 
 The goal of oceanexplorer is to enable easy access and exploration of
-the [WORLD OCEAN
-ATLAS](https://www.nodc.noaa.gov/OC5/SELECT/woaselect/woaselect.html) of
+the [World Ocean
+Atlas](https://www.nodc.noaa.gov/OC5/SELECT/woaselect/woaselect.html) of
 the US agency [NOAA](https://www.ncei.noaa.gov/).
 
 <figure>
@@ -31,7 +28,7 @@ app</figcaption>
 
 ## Check the app
 
-Check the beta-version of the app here:
+Check the app here:
 <https://utrecht-university.shinyapps.io/oceanexplorer/>
 
 ## Funding
@@ -77,7 +74,7 @@ install.packages("oceanexplorer")
 ## Example
 
 The package allows extraction of global databases of several physical
-and chemical parameters of the ocean from the NOAA WORLD OCEAN ATLAS.
+and chemical parameters of the ocean from the NOAA World Ocean Atlas.
 
 ``` r
 library(oceanexplorer)
@@ -130,9 +127,9 @@ of the datasets.
 NOAA_app()
 ```
 
-Or, the RStudio addin can be launched within the RStudio viewer pain by
+The RStudio addin can be launched within the RStudio viewer pain by
 executing the following code, or by using the `Addins` drop down menu in
-the taskbar.
+the task-bar.
 
 ``` r
 # launch an interactive shiny session
