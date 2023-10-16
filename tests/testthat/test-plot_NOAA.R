@@ -7,7 +7,7 @@ test_that("plot of NOAA atlas works", {
   skip_if_offline()
 
   # get data
-  NOAA <- get_NOAA("oxygen", 1, "annual")
+  try(NOAA <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
 
   # skip if not obtained
   skip_if_not(exists("NOAA"))
@@ -39,6 +39,14 @@ test_that("plot of NOAA atlas works", {
     "NOAA antarctic map epsg = 3031",
     plot_NOAA(NOAA, depth = 0, epsg = 3031)
   )
+
+  # fuzzy search table
+  crds_polygon <- list(lon = c(-52.79878), lat = c(47.72121))
+  points_polygon <- filter_NOAA(NOAA, 1, crds_polygon, fuzzy = 100)
+  vdiffr::expect_doppelganger(
+    "plot polygons",
+    plot_NOAA(NOAA, depth = 0, points = points_polygon , epsg = "original")
+  )
 })
 
 test_that("box clipping works for stars",{
@@ -50,7 +58,7 @@ test_that("box clipping works for stars",{
   skip_if_offline()
 
   # get data
-  NOAA <- get_NOAA("oxygen", 1, "annual")
+  try(NOAA <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
 
   # skip if not obtained
   skip_if_not(exists("NOAA"))
@@ -72,7 +80,7 @@ test_that("box clipping works for sf",{
   skip_if_offline()
 
   # get data
-  NOAA <- get_NOAA("oxygen", 1, "annual")
+  try(NOAA <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
 
   # skip if not obtained
   skip_if_not(exists("NOAA"))

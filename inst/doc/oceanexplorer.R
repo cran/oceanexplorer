@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
@@ -28,30 +28,30 @@ knitr::include_graphics("get-started-screenshot3.png")
 ## ----screenaddin, echo = FALSE, out.width="90%"-------------------------------
 knitr::include_graphics("get-started-screenshot4.png")
 
-## ----setup, eval = curl::has_internet(), error=TRUE---------------------------
-# load package
-library(oceanexplorer)
-# get data
-(WOA <- get_NOAA("phosphate", 1, "December"))
+## ----setup, eval=interactive(), error=TRUE------------------------------------
+#  # load package
+#  library(oceanexplorer)
+#  # get data
+#  (WOA <- get_NOAA("phosphate", 1, "December"))
 
-## ----plot1, fig.width=7, eval = exists("WOA")---------------------------------
-plot_NOAA(WOA, depth = 1000)
+## ----plot1, fig.width=7, eval = interactive() && exists("WOA")----------------
+#  plot_NOAA(WOA, depth = 1000)
 
-## ----save1, echo=FALSE, eval = FALSE------------------------------------------
-#  ggplot2::ggsave("vignettes/NOAA_plot1.png", plot_NOAA(WOA, depth = 1000), width = 9)
+## ----save1, echo=FALSE, eval = interactive() && exists("WOA"), message=FALSE----
+#  ggplot2::ggsave("NOAA_plot1.png", plot_NOAA(WOA, depth = 1000), width = 9)
 
 ## ----graph1, echo=FALSE, eval = !exists("WOA"), out.width="100%"--------------
-#  knitr::include_graphics("NOAA_plot1.png")
+knitr::include_graphics("NOAA_plot1.png")
 
-## ----filter, eval = exists("WOA")---------------------------------------------
-(pts <- filter_NOAA(WOA, depth = 1000, coord = list(lon = 20, lat = -46)))
+## ----filter, eval=interactive()-----------------------------------------------
+#  (pts <- filter_NOAA(WOA, depth = 1000, coord = list(lon = 20, lat = -46)))
 
-## ----plot2, fig.width=7, eval = exists("WOA")---------------------------------
-plot_NOAA(WOA, depth = 1000, points = pts)
+## ----plot2, fig.width=7, eval = interactive() && exists("WOA")----------------
+#  plot_NOAA(WOA, depth = 1000, points = pts)
 
-## ----save2, echo=FALSE, eval = FALSE------------------------------------------
-#  ggplot2::ggsave("vignettes/NOAA_plot2.png", plot_NOAA(WOA, depth = 1000, points = pts), width = 9)
+## ----save2, echo=FALSE, eval = interactive() && exists("WOA"), message=FALSE----
+#  ggplot2::ggsave("NOAA_plot2.png", plot_NOAA(WOA, depth = 1000, points = pts), width = 9)
 
 ## ----graph2, echo=FALSE, eval = !exists("WOA"), out.width="100%"--------------
-#  knitr::include_graphics("NOAA_plot2.png")
+knitr::include_graphics("NOAA_plot2.png")
 

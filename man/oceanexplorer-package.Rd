@@ -15,10 +15,11 @@ further allows interactive exploration of the data.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://utrechtuniversity.github.io/oceanexplorer/}
-  \item \url{https://utrecht-university.shinyapps.io/oceanexplorer/}
+  \item \url{https://martinschobben.github.io/oceanexplorer/}
+  \item \url{https://martinschobben.shinyapps.io/oceanexplorer/}
   \item \url{https://www.ncei.noaa.gov/products/world-ocean-atlas}
-  \item Report bugs at \url{https://github.com/UtrechtUniversity/oceanexplorer/issues}
+  \item \url{https://github.com/MartinSchobben/oceanexplorer}
+  \item Report bugs at \url{https://github.com/MartinSchobben/oceanexplorer/issues}
 }
 
 }

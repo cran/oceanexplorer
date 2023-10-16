@@ -5,7 +5,7 @@ test_that("reprojection works", {
   skip_if_offline()
 
   # get data
-  NOAAatlas <- get_NOAA("oxygen", 1, "annual")
+  try(NOAAatlas <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
 
   # skip if not obtained
   skip_if_not(exists("NOAAatlas"))
@@ -71,7 +71,7 @@ test_that("epsg check is consitent", {
   skip_if_offline()
 
   # get data
-  NOAAatlas <- get_NOAA("oxygen", 1, "annual")
+  try(NOAAatlas <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
 
   # skip if not obtained
   skip_if_not(exists("NOAAatlas"))
@@ -81,7 +81,8 @@ test_that("epsg check is consitent", {
   points <- filter_NOAA(NOAAatlas, 1, crds)
 
   wmap <- maps::map("world", wrap = c(-180, 180), plot = FALSE, fill = TRUE) |>
-    sf::st_as_sf(crs = 4326)
+    sf::st_as_sf() |>
+    sf::st_transform(crs = 4326)
 
   # original
   expect_equal(
@@ -96,6 +97,7 @@ test_that("epsg check is consitent", {
     epsg_check(NOAAatlas, NULL),
     "original"
   )
+
   expect_equal(
     epsg_check(wmap, 4326),
     "original"
@@ -143,7 +145,7 @@ test_that("point is clipped when re-projected to 3031", {
   skip_if_offline()
 
   # get data
-  NOAA <- get_NOAA("temperature", 1, "annual")
+  try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
 
   # skip if not obtained
   skip_if_not(exists("NOAA"))

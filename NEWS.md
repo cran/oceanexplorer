@@ -1,3 +1,8 @@
+# oceanexplorer 0.1.0
+
+* **Feature**: Now one can also use a fuzzy search to select chemical/physical marine parameters. This is convenient when selecting data near coasts.  
+* Varies updates in the documentation. This includes mainly links as the source and shiny app are no longer hosted at Utrecht University.
+
 # oceanexplorer 0.0.2
 
 * Removed unicode characters (5 times in data directory).
