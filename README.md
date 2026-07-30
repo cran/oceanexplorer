@@ -10,13 +10,13 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![Codecov test
-coverage](https://codecov.io/gh/MartinSchobben/Oceanexplorer/branch/master/graph/badge.svg)](https://app.codecov.io/gh/MartinSchobben/Oceanexplorer?branch=master)
+coverage](https://codecov.io/gh/MartinSchobben/Oceanexplorer/branch/main/graph/badge.svg)](https://app.codecov.io/gh/MartinSchobben/Oceanexplorer?branch=main)
 [![R-CMD-check](https://github.com/MartinSchobben/oceanexplorer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MartinSchobben/oceanexplorer/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of oceanexplorer is to enable easy access and exploration of
 the [World Ocean
-Atlas](https://www.nodc.noaa.gov/OC5/SELECT/woaselect/woaselect.html) of
+Atlas](https://www.ncei.noaa.gov/products/ocean-climate-laboratory) of
 the US agency [NOAA](https://www.ncei.noaa.gov/).
 
 <figure>
@@ -295,7 +295,7 @@ Florida: Chapman; Hall/CRC. <https://yihui.org/knitr/>.
 
 Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. *R Markdown: The
 Definitive Guide*. Boca Raton, Florida: Chapman; Hall/CRC.
-<https://bookdown.org/yihui/rmarkdown>.
+<https://pkg.yihui.org/rmarkdown-book/>.
 
 </div>
 
@@ -303,7 +303,7 @@ Definitive Guide*. Boca Raton, Florida: Chapman; Hall/CRC.
 
 Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. *R Markdown
 Cookbook*. Boca Raton, Florida: Chapman; Hall/CRC.
-<https://bookdown.org/yihui/rmarkdown-cookbook>.
+<https://pkg.yihui.org/rmarkdown-cookbook/>.
 
 </div>
 

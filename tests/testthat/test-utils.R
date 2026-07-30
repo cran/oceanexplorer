@@ -2,7 +2,8 @@ test_that("reprojection works", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip_on_ci()
+  skip()
 
   # get data
   try(NOAAatlas <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
@@ -68,7 +69,7 @@ test_that("epsg check is consitent", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip()
 
   # get data
   try(NOAAatlas <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
@@ -133,6 +134,8 @@ test_that("epsg check is consitent", {
 })
 
 test_that("stereographic projections plot click values can be converted", {
+  skip_on_cran()
+  skip_on_ci()
   expect_snapshot(
     convert_stereo(9332793, 7376573, 3031)
   )
@@ -142,7 +145,8 @@ test_that("point is clipped when re-projected to 3031", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip_on_ci()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)

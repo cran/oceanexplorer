@@ -1,3 +1,5 @@
+# oceanexplorer 0.1.1
+
 # oceanexplorer 0.1.0
 
 * **Feature**: Now one can also use a fuzzy search to select chemical/physical marine parameters. This is convenient when selecting data near coasts.  

@@ -1,12 +1,12 @@
 Package: oceanexplorer
 Title: Explore Our Planet's Oceans with NOAA
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     c(
       person(
         "Martin",  
         "Schobben", 
-        email = "schobbenmartin@gmail.com", 
+        email = "martin.schobben@pm.me", 
         role = c("aut", "cre", "cph"),
         comment = c(ORCID = "0000-0001-8560-0037")
       ),
@@ -46,10 +46,10 @@ BugReports: https://github.com/MartinSchobben/oceanexplorer/issues
 Language: en-US
 LazyData: true
 NeedsCompilation: no
-Packaged: 2023-10-15 11:46:22 UTC; amandus
-Author: Martin Schobben [aut, cre, cph]
-    (<https://orcid.org/0000-0001-8560-0037>),
-  Peter Bijl [ctb] (<https://orcid.org/0000-0002-1710-4012>)
-Maintainer: Martin Schobben <schobbenmartin@gmail.com>
+Packaged: 2026-07-30 12:23:12 UTC; mschobbe
+Author: Martin Schobben [aut, cre, cph] (ORCID:
+    <https://orcid.org/0000-0001-8560-0037>),
+  Peter Bijl [ctb] (ORCID: <https://orcid.org/0000-0002-1710-4012>)
+Maintainer: Martin Schobben <martin.schobben@pm.me>
 Repository: CRAN
-Date/Publication: 2023-10-16 19:40:02 UTC
+Date/Publication: 2026-07-30 15:10:02 UTC

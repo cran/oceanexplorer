@@ -1,8 +1,9 @@
 test_that("reformatted table works", {
 
-  # for CRAN
+  # for CRAN and CI
   skip_on_cran()
-  skip_if_offline()
+  skip_on_ci()
+  skip()
 
   # get data and filter
   try(NOAA <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)

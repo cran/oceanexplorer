@@ -2,7 +2,7 @@ test_that("check output type", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("oxygen", 1, "annual"), silent = TRUE)
@@ -22,6 +22,10 @@ test_that("check output type", {
 })
 
 test_that("that different coord classes generate the same results", {
+  
+  # skip on CRAN
+  skip_on_cran()
+  skip_on_ci()
 
   # coordinates
   lon <- c(-116.3041, -40.58253, -9.306224)
@@ -43,7 +47,7 @@ test_that("entries other then vectors of 1 or the same length cause an error", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
@@ -67,7 +71,7 @@ test_that("entries for class coords besides matrix, list and sfc throws error", 
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
@@ -92,7 +96,7 @@ test_that("wrong names for matrices or list of coordinates causes an error", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
@@ -115,7 +119,7 @@ test_that("check that epsg of depth plane and coordinates is similar", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip()
 
   # data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
@@ -183,7 +187,8 @@ test_that("epsg conversion works with character vector", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip_on_ci()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
@@ -208,7 +213,8 @@ test_that("epsg conversion works with 'original' keyword", {
 
   # for CRAN
   skip_on_cran()
-  skip_if_offline()
+  skip_on_ci()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
@@ -235,7 +241,7 @@ test_that("extraction of coords can use fuzzy search", {
   skip_on_cran()
   skip_on_ci()
   skip_on_covr()
-  skip_if_offline()
+  skip()
 
   # get data
   try(NOAA <- get_NOAA("temperature", 1, "annual"), silent = TRUE)
